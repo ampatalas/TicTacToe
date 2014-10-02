@@ -20,8 +20,8 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,0" Name="TitlePanel">
-            <TextBlock Text="tic-tac-toe" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Name="SymbolAndColorMessage" Text="aaaa" Style="{StaticResource PhoneTextNormalStyle}" Margin="20"/>
+            <TextBlock Text="tic-tac-toe" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="30" Width="400" Height="400" ShowGridLines="True" >
@@ -38,16 +38,16 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            
-            <Canvas Name="ZZ" Grid.Row="0" Grid.Column="0" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="ZO" Grid.Row="0" Grid.Column="1" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="ZT" Grid.Row="0" Grid.Column="2" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="OZ" Grid.Row="1" Grid.Column="0" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="OO" Grid.Row="1" Grid.Column="1" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="OT" Grid.Row="1" Grid.Column="2" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="TZ" Grid.Row="2" Grid.Column="0" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="TO" Grid.Row="2" Grid.Column="1" Background="Black" Tap="TicTacToeTap"/>
-            <Canvas Name="TT" Grid.Row="2" Grid.Column="2" Background="Black" Tap="TicTacToeTap"/>
+
+            <Canvas Name="ZZ" Grid.Row="0" Grid.Column="0" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap" />
+            <Canvas Name="ZO" Grid.Row="0" Grid.Column="1" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="ZT" Grid.Row="0" Grid.Column="2" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="OZ" Grid.Row="1" Grid.Column="0" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="OO" Grid.Row="1" Grid.Column="1" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="OT" Grid.Row="1" Grid.Column="2" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="TZ" Grid.Row="2" Grid.Column="0" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="TO" Grid.Row="2" Grid.Column="1" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
+            <Canvas Name="TT" Grid.Row="2" Grid.Column="2" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
 
         </Grid>
 

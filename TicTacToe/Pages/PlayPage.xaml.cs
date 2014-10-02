@@ -87,7 +87,9 @@ namespace TicTacToe.Pages
                 };
                 BindingOperations.SetBinding(path, Path.DataProperty, b);
                 path.Stroke = brush;
+                path.StrokeThickness = 3;
                 sender.Children.Add(path);
+                
             }
         }
 

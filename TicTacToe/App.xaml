@@ -8,6 +8,13 @@
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:TicTacToe" x:Key="LocalizedStrings"/>
+        
+        <Style TargetType="Canvas" x:Key="PlayingCanvasStyle">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="100" />
+            <Setter Property="Background" Value="Black" />
+        </Style>
+        
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
