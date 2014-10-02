@@ -30,11 +30,11 @@ namespace TicTacToe
             String uriAddress = "/Pages/PlayPage.xaml";
             if (color == null || symbol == null)
             {
-                MessageBox.Show("You didn't pick color or symbol!");
+                MessageBox.Show("You didn't pick color or UserSymbol!");
             }
             else
             {
-                uriAddress += "?color=" + color + "&symbol=" + symbol;
+                uriAddress += "?color=" + color + "&UserSymbol=" + symbol;
                 NavigationService.Navigate(new Uri(uriAddress, UriKind.Relative));
             }
         }
@@ -51,12 +51,12 @@ namespace TicTacToe
 
         private void NoughtSymbol_Checked(object sender, RoutedEventArgs e)
         {
-            symbol = "nought";
+            symbol = "O";
         }
 
         private void CrossSymbol_Checked(object sender, RoutedEventArgs e)
         {
-            symbol = "cross";
+            symbol = "X";
         }
     }
 }

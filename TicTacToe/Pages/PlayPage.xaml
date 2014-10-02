@@ -38,17 +38,16 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!--
-                <Canvas Name="00" Grid.Row="0" Grid.Column="0" Tap="TicTacToeTap"/>
-                <Canvas Name="01" Grid.Row="0" Grid.Column="1"/>
-                <Canvas Name="02" Grid.Row="0" Grid.Column="2"/>
-                <Canvas Name="10" Grid.Row="1" Grid.Column="0"/>
-                <Canvas Name="11" Grid.Row="1" Grid.Column="1"/>
-                <Canvas Name="12" Grid.Row="1" Grid.Column="2"/>
-                <Canvas Name="20" Grid.Row="2" Grid.Column="0"/>
-                <Canvas Name="21" Grid.Row="2" Grid.Column="1"/>
-                <Canvas Name="22" Grid.Row="2" Grid.Column="2"/>
-            -->
+            
+            <Canvas Name="ZZ" Grid.Row="0" Grid.Column="0" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="ZO" Grid.Row="0" Grid.Column="1" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="ZT" Grid.Row="0" Grid.Column="2" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="OZ" Grid.Row="1" Grid.Column="0" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="OO" Grid.Row="1" Grid.Column="1" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="OT" Grid.Row="1" Grid.Column="2" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="TZ" Grid.Row="2" Grid.Column="0" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="TO" Grid.Row="2" Grid.Column="1" Background="Black" Tap="TicTacToeTap"/>
+            <Canvas Name="TT" Grid.Row="2" Grid.Column="2" Background="Black" Tap="TicTacToeTap"/>
 
         </Grid>
 
