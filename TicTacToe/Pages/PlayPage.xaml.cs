@@ -61,22 +61,25 @@ namespace TicTacToe.Pages
             }
             else
             {
-                drawSymbol(canvasSender, userSymbol);
+                Move userMove = new Move(row, column, userSymbol);
+                drawSymbol(userMove);
+                if (game.getResult().Equals(Game.Result.PLAY)) drawSymbol(game.computerMove());
+                checkResult();
             }
 
         }
 
-        private void drawSymbol(Canvas sender, string userSymbol)
+        private void drawSymbol(Move move)
         {
-            if (userSymbol.Equals("O"))
+            Canvas canvas = ContentPanel.Children.Cast<Canvas>().FirstOrDefault(e => Grid.GetColumn(e) == move.column && Grid.GetRow(e) == move.row);
+            if (move.symbol.Equals("O"))
             {
                 Ellipse el = new Ellipse();
-
                 el.Width = 100;
                 el.Height = 100;
                 el.Stroke = brush;
                 el.StrokeThickness = 5;
-                sender.Children.Add(el);
+                canvas.Children.Add(el);
             }
             else
             {
@@ -88,9 +91,16 @@ namespace TicTacToe.Pages
                 BindingOperations.SetBinding(path, Path.DataProperty, b);
                 path.Stroke = brush;
                 path.StrokeThickness = 3;
-                sender.Children.Add(path);
-                
+                canvas.Children.Add(path);
             }
+        }
+
+
+        private void checkResult()
+        {
+            if (game.getResult().Equals(Game.Result.DRAW)) MessageBox.Show(Msg_Draw);
+            else if (game.getResult().Equals(Game.Result.WIN)) MessageBox.Show(Msg_Win);
+            else if (game.getResult().Equals(Game.Result.LOST)) MessageBox.Show(Msg_Lost);
         }
 
         private int getIntFromChar(char p)
