@@ -2,7 +2,7 @@
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
   <App xmlns="" ProductID="{277379ce-9c0e-4424-80ac-5673fd3af291}" Title="tic tac toe" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="TicTacToe author" Description="The classic game of tic-tac-toe." Publisher="TicTacToe" PublisherID="{7609bbeb-f15b-459e-8ee1-da2db28ab663}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">Images\icon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -16,9 +16,9 @@
     <Tokens>
       <PrimaryToken TokenID="TicTacToeToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Images\icon.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Images\icon.png</BackgroundImageURI>
           <Title>tic tac toe</Title>
           <BackContent>
           </BackContent>
