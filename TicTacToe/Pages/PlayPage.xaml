@@ -1,0 +1,57 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TicTacToe.Pages.PlayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,0" Name="TitlePanel">
+            <TextBlock Text="tic-tac-toe" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Name="SymbolAndColorMessage" Text="aaaa" Style="{StaticResource PhoneTextNormalStyle}" Margin="20"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="30" Width="400" Height="400" ShowGridLines="True" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--
+                <Canvas Name="00" Grid.Row="0" Grid.Column="0" Tap="TicTacToeTap"/>
+                <Canvas Name="01" Grid.Row="0" Grid.Column="1"/>
+                <Canvas Name="02" Grid.Row="0" Grid.Column="2"/>
+                <Canvas Name="10" Grid.Row="1" Grid.Column="0"/>
+                <Canvas Name="11" Grid.Row="1" Grid.Column="1"/>
+                <Canvas Name="12" Grid.Row="1" Grid.Column="2"/>
+                <Canvas Name="20" Grid.Row="2" Grid.Column="0"/>
+                <Canvas Name="21" Grid.Row="2" Grid.Column="1"/>
+                <Canvas Name="22" Grid.Row="2" Grid.Column="2"/>
+            -->
+
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
