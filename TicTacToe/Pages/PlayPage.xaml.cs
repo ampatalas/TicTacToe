@@ -10,8 +10,9 @@ using Microsoft.Phone.Shell;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Data;
+using TicTacToe.Resources;
 
-namespace TicTacToe.Pages
+namespace TicTacToe.Game
 {
     public partial class PlayPage : PhoneApplicationPage
     {
@@ -63,7 +64,7 @@ namespace TicTacToe.Pages
             {
                 Move userMove = new Move(row, column, userSymbol);
                 drawSymbol(userMove);
-                if (game.getResult().Equals(Game.Result.PLAY)) drawSymbol(game.computerMove());
+                if (game.getResult().Equals(Game.Result.PLAY)) drawSymbol(game.computerSmartMove());
                 checkResult();
             }
 
@@ -109,6 +110,15 @@ namespace TicTacToe.Pages
             if (p == 'O') return 1;
             if (p == 'T') return 2;
             else throw new Exception("Unexpected character.");
+        }
+
+        private void CleanBoardClick(object sender, RoutedEventArgs e)
+        {
+            game.CleanBoard();
+            foreach (Canvas canvas in ContentPanel.Children)
+            {
+                canvas.Children.Clear();
+            }
         }
 
 

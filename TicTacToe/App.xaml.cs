@@ -112,7 +112,7 @@ namespace TicTacToe
             if (phoneApplicationInitialized)
                 return;
 
-            // Create the frame but don't set it as RootVisual yet; this allows the splash
+            // Create the frame but don't moveMade it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
             RootFrame = new PhoneApplicationFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
@@ -207,8 +207,8 @@ namespace TicTacToe
             catch
             {
                 // If an exception is caught here it is most likely due to either
-                // ResourceLangauge not being correctly set to a supported language
-                // code or ResourceFlowDirection is set to a value other than LeftToRight
+                // ResourceLangauge not being correctly moveMade to a supported language
+                // code or ResourceFlowDirection is moveMade to a value other than LeftToRight
                 // or RightToLeft.
 
                 if (Debugger.IsAttached)

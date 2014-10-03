@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TicTacToe.Pages
+namespace TicTacToe.Game
 {
-    class Move
+    public class Move
     {
         public int row { get; set; }
         public int column { get; set; }
@@ -17,5 +17,6 @@ namespace TicTacToe.Pages
             this.column = column;
             this.symbol = symbol;
         }
+
     }
 }

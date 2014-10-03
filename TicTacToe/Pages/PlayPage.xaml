@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="TicTacToe.Pages.PlayPage"
+    x:Class="TicTacToe.Game.PlayPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -20,11 +20,11 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,0" Name="TitlePanel">
-            <TextBlock Name="SymbolAndColorMessage" Text="aaaa" Style="{StaticResource PhoneTextNormalStyle}" Margin="20"/>
             <TextBlock Text="tic-tac-toe" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Name="SymbolAndColorMessage" Text="aaaa" Style="{StaticResource PhoneTextNormalStyle}" Margin="20, 10, 10, 0"/>
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="30" Width="400" Height="400" ShowGridLines="True" >
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0, -150, 0, 0" Width="400" Height="400" ShowGridLines="True" >
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -50,6 +50,7 @@
             <Canvas Name="TT" Grid.Row="2" Grid.Column="2" Style="{StaticResource PlayingCanvasStyle}" Tap="TicTacToeTap"/>
 
         </Grid>
+        <Button Content="Clean board" Height="70" Margin="100,500,100,0" Grid.Row="1" VerticalAlignment="Top" Width="223" Click="CleanBoardClick"/>
 
     </Grid>
 
